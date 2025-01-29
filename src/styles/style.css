@@ -73,9 +73,24 @@ body {
 }
 
 .todo-list {
+  max-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow-y: scroll;
   list-style-type: none;
   padding: 0;
   margin: 25px 0 0;
+}
+.todo-list::-webkit-scrollbar {
+  width: 8px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+.todo-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }
 
 .todo-item {
@@ -182,6 +197,18 @@ body {
 .add-btn {
   padding: 10px;
   font-size: 1rem;
+}
+.app-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: var(--background-color);
+}
+.app-footer strong {
+  color: var(--primary-color);
 }
 
 @media (min-width: 576px) {
